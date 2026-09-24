@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Students | Student Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+
+        <aside class="sidebar">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    SP
+                </div>
+
+                <div>
+
+                    <h2>
+                        Student Portal
+                    </h2>
+
+                    <span>
+                        School System
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a
+                    href="dashboard.html"
+                    class="nav-link"
+                >
+                    Dashboard
+                </a>
+
+                <a
+                    href="students.html"
+                    class="nav-link active"
+                >
+                    Students
+                </a>
+
+                <a
+                    href="dashboard.html#courses"
+                    class="nav-link"
+                >
+                    Courses
+                </a>
+
+                <a
+                    href="dashboard.html#settings"
+                    class="nav-link"
+                >
+                    Settings
+                </a>
+
+            </nav>
+
+
+            <a
+                href="login.html"
+                class="logout"
+                onclick="logout()"
+            >
+                Logout
+            </a>
+
+        </aside>
+
+
+        <main class="main-content">
+
+
+            <header class="topbar">
+
+                <div>
+
+                    <p class="small-title">
+                        STUDENT MANAGEMENT
+                    </p>
+
+                    <h1>
+                        Students
+                    </h1>
+
+                </div>
+
+            </header>
+
+
+            <section class="content-section">
+
+
+                <div class="section-header">
+
+                    <h2>
+                        Student Information
+                    </h2>
+
+                    <p class="section-description">
+                        All registered students are displayed below.
+                    </p>
+
+                </div>
+
+
+                <div class="table-card">
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        ID
+                                    </th>
+
+                                    <th>
+                                        Name
+                                    </th>
+
+                                    <th>
+                                        Email
+                                    </th>
+
+                                    <th>
+                                        Course
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="studentTable">
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <div
+                        id="emptyMessage"
+                        class="empty-message"
+                    >
+                        No student records available.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <footer>
+                Student Portal | IT9 Lab Activity 4
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+
+
