@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | Student Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    SP
+                </div>
+
+                <div>
+
+                    <h2>
+                        Student Portal
+                    </h2>
+
+                    <span>
+                        School System
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a
+                    href="dashboard.html"
+                    class="nav-link active"
+                >
+                    Dashboard
+                </a>
+
+
+                <a
+                    href="students.html"
+                    class="nav-link"
+                >
+                    Students
+                </a>
+
+
+                <a
+                    href="#courses"
+                    class="nav-link"
+                >
+                    Courses
+                </a>
+
+
+                <a
+                    href="#settings"
+                    class="nav-link"
+                >
+                    Settings
+                </a>
+
+            </nav>
+
+
+            <a
+                href="login.html"
+                class="logout"
+                onclick="logout()"
+            >
+                Logout
+            </a>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+
+            <!-- HEADER -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <p class="small-title">
+                        STUDENT PORTAL
+                    </p>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                </div>
+
+
+                <div class="user-profile">
+
+                    <div class="avatar" id="userAvatar">
+                        U
+                    </div>
+
+                    <div>
+
+                        <strong id="userName">
+                            User
+                        </strong>
+
+                        <small>
+                            Student
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- WELCOME -->
+
+            <div class="welcome-card">
+
+                <span class="welcome-label">
+                    WELCOME
+                </span>
+
+                <h2 id="welcomeName">
+                    Welcome back!
+                </h2>
+
+                <p>
+                    Manage and view student information
+                    from your dashboard.
+                </p>
+
+            </div>
+
+
+            <!-- INFORMATION CARDS -->
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <span>
+                        Student Records
+                    </span>
+
+                    <h2 id="studentCount">
+                        0
+                    </h2>
+
+                    <p>
+                        Registered students
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span>
+                        Current User
+                    </span>
+
+                    <h2 id="courseDisplay">
+                        -
+                    </h2>
+
+                    <p>
+                        Current course
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span>
+                        System Status
+                    </span>
+
+                    <h2>
+                        Active
+                    </h2>
+
+                    <p>
+                        System is available
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STUDENT INFORMATION -->
+
+            <section
+                class="content-section"
+                id="students"
+            >
+
+                <div class="section-header">
+
+                    <p class="small-title">
+                        STUDENT MANAGEMENT
+                    </p>
+
+                    <h2>
+                        Student Information
+                    </h2>
+
+                    <p class="section-description">
+                        Newly registered students appear here automatically.
+                    </p>
+
+                </div>
+
+
+                <div class="table-card">
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        ID
+                                    </th>
+
+                                    <th>
+                                        Name
+                                    </th>
+
+                                    <th>
+                                        Email
+                                    </th>
+
+                                    <th>
+                                        Course
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="studentTable">
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <div
+                        id="emptyMessage"
+                        class="empty-message"
+                    >
+                        No student records available.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- COURSES -->
+
+            <section
+                id="courses"
+                class="content-section"
+            >
+
+                <div class="simple-card">
+
+                    <p class="small-title">
+                        ACADEMIC INFORMATION
+                    </p>
+
+                    <h2>
+                        Courses
+                    </h2>
+
+                    <p>
+                        Course information can be added here.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- SETTINGS -->
+
+<section id="settings" class="content-section">
+
+    <div class="section-header">
+
+        <p class="small-title">
+            ACCOUNT MANAGEMENT
+        </p>
+
+        <h2>
+            Settings
+        </h2>
+
+        <p class="section-description">
+            Manage your student account and dashboard preferences.
+        </p>
+
+    </div>
+
+    <div class="settings-grid">
+
+        <!-- PROFILE SETTINGS -->
+
+        <div class="simple-card">
+
+            <h3>
+                Profile Settings
+            </h3>
+
+            <p>
+                Update your student information.
+            </p>
+
+            <label for="settingsName">
+                Student Name
+            </label>
+
+            <input
+                type="text"
+                id="settingsName"
+                placeholder="Enter your name"
+            >
+
+            <label for="settingsCourse">
+                Course
+            </label>
+
+            <input
+                type="text"
+                id="settingsCourse"
+                placeholder="Enter your course"
+            >
+
+            <button
+                type="button"
+                class="save-button"
+                onclick="saveSettings()"
+            >
+                Save Changes
+            </button>
+
+        </div>
+
+
+        <!-- APPEARANCE SETTINGS -->
+
+        <div class="simple-card">
+
+            <h3>
+                Dashboard Preferences
+            </h3>
+
+            <p>
+                Customize your dashboard experience.
+            </p>
+
+            <label for="themeSelect">
+                Dashboard Theme
+            </label>
+
+            <select id="themeSelect">
+
+                <option value="default">
+                    Default Theme
+                </option>
+
+                <option value="dark">
+                    Dark Theme
+                </option>
+
+            </select>
+
+            <button
+                type="button"
+                class="save-button"
+                onclick="saveTheme()"
+            >
+                Apply Theme
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
